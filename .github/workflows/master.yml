@@ -61,6 +61,7 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: ${{ matrix.java }}
+        overwrite-settings: false
     - name: Build with Maven
       run: |
         export MAVEN_OPTS="-Xmx2g -XX:ReservedCodeCacheSize=1g -Dorg.slf4j.simpleLogger.defaultLogLevel=WARN"
@@ -78,6 +79,7 @@ jobs:
     - uses: actions/setup-java@v1
       with:
         java-version: '11'
+        overwrite-settings: false
     - uses: actions/setup-python@v1
       with:
         python-version: '3.x'
@@ -103,6 +105,7 @@ jobs:
     - uses: actions/setup-java@v1
       with:
         java-version: '11'
+        overwrite-settings: false
     - uses: r-lib/actions/setup-r@v1
       with:
         r-version: '3.6.2'
@@ -132,6 +135,7 @@ jobs:
     - uses: actions/setup-java@v1
       with:
         java-version: '1.8'
+        overwrite-settings: false
     - uses: actions/setup-python@v1
       with:
         python-version: '3.x'
